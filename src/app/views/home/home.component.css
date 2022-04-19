@@ -1,0 +1,14 @@
+.home .title {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.home .subtitle {
+    font-size: 1.1rem;
+}
+
+/* 
+    O 'rem' se baseia na fonte definida da sua página inteira, ou seja, no raiz.
+    O 'em' é sempre relativo ao pai, ou seja, a fonte definida na tag anterior.
+*/
