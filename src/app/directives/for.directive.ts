@@ -6,7 +6,7 @@ import { Directive, OnInit, Input, ViewContainerRef, TemplateRef } from '@angula
 
 export class ForDirective implements OnInit {
   // Esta sintaxe diz o que vai pegar depois da palavra chave 'Em'
-  @Input("myForEm") numbers: number[];
+  @Input("myForEm") numbers: number[] | undefined;
 
   constructor(
     private container: ViewContainerRef, 
@@ -14,10 +14,12 @@ export class ForDirective implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    for(let number of this.numbers) {
-      this.container.createEmbeddedView(
-        this.template, { $implicit: number }); 
-      // O template é o q vc quer aplicar dentro da diretiva.
+    if(this.numbers) {
+      for(let number of this.numbers) {
+        this.container.createEmbeddedView(
+          this.template, { $implicit: number }); 
+        // O template é o q vc quer aplicar dentro da diretiva.
+      }
     }
   }
 }

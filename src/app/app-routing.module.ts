@@ -24,3 +24,10 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+/*
+  Binding é a ligação entre o evento com o método.
+
+  Event Binding é a ligação de um evento com uma função, um metodo dentro de uma classe ou de um componente;
+  Binding de Atributo é a atribuição do valor de um atributo a um componente. 
+*/
